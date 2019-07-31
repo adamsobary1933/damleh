@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                Laravell
+               Pembelian Obat
                 </div>
 
                 <div class="links">
