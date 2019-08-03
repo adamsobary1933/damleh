@@ -34,26 +34,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        @guest
+                    @guest
+                        {{--  Kondisi  --}}
+                        @else
+                        @role('admin')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Sebelum Auth</a>
+                                <a class="nav-link" href="{{ url('admin/user') }}">User</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Menu 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Menu 3</a>
+                            </li>
+                            @endrole
                         @endguest
-
-                    @auth
-                    <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Super Admin</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Admin</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">User</a>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Global User</a>
-                            </li>
-                            </li>
-                    @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

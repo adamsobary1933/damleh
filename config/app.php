@@ -161,6 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        //Add On
+        Laratrust\LaratrustServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -225,6 +227,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        //Ad On
+        'Laratrust'   => Laratrust\LaratrustFacade::class,
 
     ],
 
